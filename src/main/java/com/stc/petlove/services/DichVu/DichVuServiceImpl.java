@@ -23,7 +23,12 @@ public class DichVuServiceImpl implements DichVuService{
 
     @Override
     public DichVu getDichVu(String id) {
-        return dichVuRepository.findById(id).orElseThrow(()->new NotFoundException(String.format("Không tồn tại dịch vụ có mã id là: %s",id)));
+        return dichVuRepository.findById(id).orElseThrow(()->new NotFoundException(String.format("Không tồn tại id là: %s",id)));
+    }
+
+    @Override
+    public List<DichVu> getAllDichVu() {
+        return dichVuRepository.findAll();
     }
 
     @Override
@@ -83,10 +88,5 @@ public class DichVuServiceImpl implements DichVuService{
         DichVu dichVu = getDichVu(id);
         dichVuRepository.delete(dichVu);
         return dichVu;
-    }
-
-    @Override
-    public List<DichVu> getAllDichVu() {
-        return dichVuRepository.findAll();
     }
 }

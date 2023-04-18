@@ -1,7 +1,7 @@
 package com.stc.petlove.controllers;
 
-import com.stc.petlove.entities.DichVu;
 import com.stc.petlove.dtos.DichVuDTO;
+import com.stc.petlove.entities.DichVu;
 import com.stc.petlove.services.DichVu.DichVuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

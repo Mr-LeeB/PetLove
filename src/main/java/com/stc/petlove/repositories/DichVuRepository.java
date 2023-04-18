@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DichVuRepository extends MongoRepository<DichVu, String> {
-    DichVu findByMaDichVu(String maDichVu);
+    boolean findByMaDichVu(String maDichVu);
     // CRUD methods
 }

@@ -1,8 +1,8 @@
 package com.stc.petlove.controllers;
 
 
-import com.stc.petlove.entities.LoaiThuCung;
 import com.stc.petlove.dtos.LoaiThuCungDTO;
+import com.stc.petlove.entities.LoaiThuCung;
 import com.stc.petlove.services.LoaiThuCung.LoaiThuCungService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

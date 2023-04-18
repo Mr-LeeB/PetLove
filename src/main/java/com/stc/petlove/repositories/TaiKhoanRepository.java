@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface TaiKhoanRepository extends MongoRepository<TaiKhoan, String> {
-    Optional<TaiKhoan> findByEmail(String email);
+    boolean findByEmail(String email);
 
     @Query(value = "{'email': ?0}")
     Optional<TaiKhoan> getUser(String email);

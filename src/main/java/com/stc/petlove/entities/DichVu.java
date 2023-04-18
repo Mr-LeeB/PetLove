@@ -37,12 +37,12 @@ public class DichVu {
     private String noiDung;
 
     // Giá dịch vụ phụ thuộc vào loại thú cưng và cân nặng của thú cưng
-    private List<GiaDichVu> giaDichVus = new ArrayList<>();
+    private List<GiaDichVu> giaDichVu = new ArrayList<>();
     public void setInfo(DichVu dichVu) {
         this.maDichVu = dichVu.getMaDichVu();
         this.tenDichVu = dichVu.getTenDichVu();
         this.noiDung = dichVu.getNoiDung();
-        this.giaDichVus = dichVu.getGiaDichVus();
+        this.giaDichVu = dichVu.getGiaDichVu();
     }
     private boolean trangThai = true;
 }

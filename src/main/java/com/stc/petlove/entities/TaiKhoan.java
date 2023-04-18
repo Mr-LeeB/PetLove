@@ -45,7 +45,13 @@ public class TaiKhoan {
         this.dienThoai = dienThoai;
         this.roles = roles;
     }
-    public <T> TaiKhoan(String datnv, String s, String s1, List<T> asList) {
+
+    public void setInfo(TaiKhoan taiKhoan) {
+        this.name = taiKhoan.getName();
+        this.email = taiKhoan.getEmail();
+        this.password = taiKhoan.getPassword();
+        this.dienThoai = taiKhoan.getDienThoai();
+        this.roles = taiKhoan.getRoles();
     }
     private boolean trangThai = true;
 }

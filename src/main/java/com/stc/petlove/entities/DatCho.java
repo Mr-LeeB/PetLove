@@ -31,7 +31,7 @@ public class DatCho {
     // email người đặt chỗ
     private String email;
 
-    private List<ThongTinDatCho> thongTinDatChos = new ArrayList<>();
+    private List<ThongTinDatCho> thongTinDatCho = new ArrayList<>();
 
     // Thời gian chăm sóc thú cưng
     private Date thoiGian;

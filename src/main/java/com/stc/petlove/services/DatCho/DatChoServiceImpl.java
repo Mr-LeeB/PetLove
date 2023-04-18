@@ -22,22 +22,27 @@ public class DatChoServiceImpl implements DatChoService{
 
     @Override
     public DatCho getDatCho(String id) {
-        return datChoRepository.findById(id).orElseThrow(()-> new NotFoundException(String.format("Không tồn tại đặt chổ có id là: %s",id)));
+        return datChoRepository.findById(id).orElseThrow(()-> new NotFoundException(String.format("Không tồn tại id là: %s",id)));
+    }
+
+    @Override
+    public List<DatCho> getAllDatCho(){
+        return datChoRepository.findAll();
     }
 
     @Override
     public DatCho create(DatChoDTO DTO) {
         if(ObjectUtils.isEmpty(DTO.getEmail())){
-            throw new InvalidException("Email không được bỏ trống");
+            throw new InvalidException("Hãy điền Email");
         }
         if(ObjectUtils.isEmpty(DTO.getThongTinDatCho())){
-            throw new InvalidException("Thông tin đặt chổ không được để trống");
+            throw new InvalidException("Hãy điền thông tin đặt chổ");
         }
         if(ObjectUtils.isEmpty(DTO.getThoiGian())){
-            throw new InvalidException("Thời gian không được để trống");
+            throw new InvalidException("Hãy điền thời gian");
         }
         if(ObjectUtils.isEmpty(DTO.getCanDan())){
-            throw new InvalidException("căn dặn không được để trống");
+            throw new InvalidException("Hãy điền căn dặn");
         }
         if(ObjectUtils.isEmpty(DTO.getTrangThaiDatCho())){
             throw new InvalidException("Trạng thái đặt chỗ không được để trống");
@@ -56,16 +61,16 @@ public class DatChoServiceImpl implements DatChoService{
     public DatCho update(String id, DatChoDTO DTO) {
         DatCho datCho = getDatCho(id);
         if(ObjectUtils.isEmpty(DTO.getEmail())){
-            throw new InvalidException("Email không được bỏ trống");
+            throw new InvalidException("Hãy điền Email");
         }
         if(ObjectUtils.isEmpty(DTO.getThongTinDatCho())){
-            throw new InvalidException("Thông tin đặt chổ không được để trống");
+            throw new InvalidException("Hãy điền thông tin đặt chổ");
         }
         if(ObjectUtils.isEmpty(DTO.getThoiGian())){
-            throw new InvalidException("Thời gian không được để trống");
+            throw new InvalidException("Hãy điền thời gian");
         }
         if(ObjectUtils.isEmpty(DTO.getCanDan())){
-            throw new InvalidException("căn dặn không được để trống");
+            throw new InvalidException("Hãy điền căn dặn");
         }
         if(ObjectUtils.isEmpty(DTO.getTrangThaiDatCho())){
             throw new InvalidException("Trạng thái đặt chỗ không được để trống");
@@ -85,10 +90,5 @@ public class DatChoServiceImpl implements DatChoService{
         DatCho datCho = getDatCho(id);
         datChoRepository.delete(datCho);
         return null;
-    }
-
-    @Override
-    public List<DatCho> getAllDatCho(){
-        return datChoRepository.findAll();
     }
 }

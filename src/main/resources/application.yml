@@ -4,7 +4,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017
-      database: pet-love
+      database: pet-love-bao
   autoconfigure:
     exclude:
       - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
