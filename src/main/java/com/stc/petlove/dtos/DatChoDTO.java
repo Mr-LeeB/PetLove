@@ -9,23 +9,14 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class DatChoDto {
-    private String id;
-
+@AllArgsConstructor
+public class DatChoDTO {
     private String email;
-
     private List<ThongTinDatCho> thongTinDatCho = new ArrayList<>();
-
     private Date thoiGian;
-
     private String canDan;
-
     private String trangThaiDatCho;
-
-    private boolean trangThai = true;
 }

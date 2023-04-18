@@ -5,16 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoaiThuCungDto {
-    private String id;
-
+public class LoaiThuCungDTO {
     private String maLoaiThuCung;
-
     private String tenLoaiThuCung;
-
-    private Boolean trangThai = true;
 }
